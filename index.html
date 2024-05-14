@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book Management System</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <h1>Book Management System</h1>
+
+        <h2>Add a New Book</h2>
+        <form id="addBookForm" class="form-inline">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" id="author" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" class="form-control" required>
+            </div>
+            <button type="submit" class="btn">Add Book</button>
+        </form>
+
+        <h2>Books</h2>
+        <table class="table" id="booksTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Books will be loaded here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for updating books -->
+    <div class="modal fade" id="updateModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update Book</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateBookForm">
+                        <div class="form-group">
+                            <label for="updateTitle">Title:</label>
+                            <input type="text" id="updateTitle" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="updateAuthor">Author:</label>
+                            <input type="text" id="updateAuthor" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="updateGenre">Genre:</label>
+                            <input type="text" id="updateGenre" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn">Update Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
